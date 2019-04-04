@@ -1,0 +1,89 @@
+
+Sum Data Number :   1150
+
+
+Summary
+
+
+        length                                                             \
+         count         mean          std    min      25%     50%      75%
+label
+ekonomi  230.0  2289.760870  1552.241186  346.0  1142.00  1766.5  3067.75
+magazin  230.0  1107.839130  1342.650789  196.0   551.25   651.0  1108.00
+saglik   230.0  1683.530435  1320.373500  311.0   898.25  1229.0  2030.25
+siyasi   230.0  1814.356522  1335.055567  310.0   904.25  1455.5  2397.50
+spor     230.0  2032.673913  1642.466681  228.0   871.00  1719.0  2596.25
+
+
+             max
+label
+ekonomi   7951.0
+magazin   9958.0
+saglik    9010.0
+siyasi   12114.0
+spor      9480.0
+
+
+
+
+First 10 Data
+0    AK Parti Grup Başkanı Bülent Arınç, Genel Başk...
+1    Bush'a KKTC mesajı\n\nAnkara, ABD Başkanı Bush...
+2    Microsoft Service Pack 2 hazır   \nMicrosoft, ...
+3    Garfield'ın sinema filmi Türkiye'de de gösteri...
+4    Ebru Şallı ve Harun Tan çifti, Bodrum'dan döne...
+5    Ayrılık yaradı \n\nHollywood'da pek çok kadın ...
+6    Akbank Yönetim Kurulu Başkanı Erol Sabancı, Tü...
+7    Arçelik taş gibi: 1-3\n\n\nKırmızı-Siyahlı tak...
+8    MHP taban ve ilke arasına sıkıştı\n\n\n18 Nisa...
+9    KKTC Cumhurbaşkanı Rauf Denktaş, Yeditepe Üniv...
+Name: message, dtype: object
+
+
+
+
+WORD STEMMER PROCESS (TF-IDF)
+
+
+
+
+
+
+
+
+Message Train : 920 Message Test :  230 Sum Data :  1150
+
+
+
+
+SVM Clasification:
+               precision    recall  f1-score   support
+
+     ekonomi       0.92      0.94      0.93        49
+     magazin       0.94      1.00      0.97        47
+      saglik       0.98      0.90      0.93        48
+      siyasi       0.91      0.98      0.94        43
+        spor       1.00      0.93      0.96        43
+
+   micro avg       0.95      0.95      0.95       230
+   macro avg       0.95      0.95      0.95       230
+weighted avg       0.95      0.95      0.95       230
+
+SVM Confussion matrix:
+ [[46  0  1  2  0]
+ [ 0 47  0  0  0]
+ [ 4  1 43  0  0]
+ [ 0  1  0 42  0]
+ [ 0  1  0  2 40]]
+
+
+
+
+SVM Scores :
+ [0.92173913 0.96521739 0.94782609 0.93913043 0.95652174 0.96521739
+ 0.90434783 0.96521739 0.96521739 0.95652174]
+
+
+
+
+SVM Accuracy: 0.95 (+/- 0.04)

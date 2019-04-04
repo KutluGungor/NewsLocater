@@ -1,0 +1,85 @@
+﻿@model NewsLocater.Models.News
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Title -->
+    <title>Dorne - Directory &amp; Listing Template</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link href="~/assets/style.css" rel="stylesheet">
+
+    <!-- Responsive CSS -->
+    <link href="~/assets/css/responsive/responsive.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <section class="dorne-welcome-area bg-img bg-overlay" style="background-image: url(/assets/img/bg-img/hero-1.jpg);">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+
+                <div class="col-12 col-md-10">
+
+                    @using (Html.BeginForm())
+                    {
+                        @Html.ValidationSummary(true)
+
+                        <hr />
+                        <div class="hero-search-form">
+                            <!-- Tabs Content -->
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
+
+                                    <div class="form-group">
+                                        <label for="url"><h6>Url'i Gönder</h6></label>
+                                        @Html.TextBoxFor(model => model.Link, htmlAttributes: new { @class = "form-control col-md-12", @required = "reqquired" })
+                                    </div>
+                                    <button type="submit" class="btn dorne-btn col-md-3 pull-right">GÖNDER</button>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+            </div>
+        </div>
+        @if (ViewBag.Deneme != null)
+        {
+            <div align="center">
+                <br />
+                <h4 style="color:white;width:1000px;">Girdiğiniz Haber "@ViewBag.Deneme" Kategorisindedir.</h4>
+            </div>
+        }
+    </section>
+
+
+    <!-- ****** Footer Area Start ****** -->
+    <!-- ****** Footer Area End ****** -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="~/assets/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="~/assets/js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap-4 js -->
+    <script src="~/assets/js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="~/assets/js/others/plugins.js"></script>
+    <!-- Active JS -->
+    <script src="~/assets/js/active.js"></script>
+</body>
+
+</html>
