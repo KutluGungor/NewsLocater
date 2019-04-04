@@ -1,0 +1,2 @@
+# NewsLocater
+Haber Sınıflandırma
